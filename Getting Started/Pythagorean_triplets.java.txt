@@ -1,0 +1,31 @@
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        // write your code here  
+        Scanner scn = new Scanner(System.in);
+        int a = scn.nextInt();
+        int b = scn.nextInt();
+        int c = scn.nextInt();
+        int max = a;
+        if(b>=max){
+            max=b;
+        }
+        if(c>=max){
+            max=c;
+        }
+         if(max==a) {
+            boolean stat =((b*b)+(c*c)==(a*a));
+            System.out.println(stat);
+        }
+        else if(max==b){
+            boolean stat =((c*c)+(a*a)==(b*b));
+            System.out.println(stat);
+        }
+        else{
+            boolean stat=((a*a)+(b*b)==(c*c));
+            System.out.println(stat);
+        }
+    }
+}
